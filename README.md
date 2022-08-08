@@ -2,7 +2,9 @@
 
 ## AppCenterApiClientApp - console API client for the App Center
 
-    USAGE: AppCenterApiClientApp --api-key <YOUR_APP_CENTER_API_KEY_HERE>
+.NET 4.8 is required
+
+    USAGE: AppCenterApiClientApp.exe --api-key <YOUR_APP_CENTER_API_KEY_HERE>
 
 ## AppCenterApiClientLib - the C# library for the App Center Client
 
