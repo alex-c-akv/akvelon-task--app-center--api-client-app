@@ -244,7 +244,7 @@ namespace AppCenterApiClientLib.Model
         public DateTime? LastOccurrence { get; set; }
 
         /// <summary>
-        /// Gets or Sets Exception
+        /// Gets or Sets AppCenterException
         /// </summary>
         [DataMember(Name="exception", EmitDefaultValue=false)]
         public string Exception { get; set; }
@@ -292,7 +292,7 @@ namespace AppCenterApiClientLib.Model
             sb.Append("  ImpactedUsers: ").Append(ImpactedUsers).Append("\n");
             sb.Append("  FirstOccurrence: ").Append(FirstOccurrence).Append("\n");
             sb.Append("  LastOccurrence: ").Append(LastOccurrence).Append("\n");
-            sb.Append("  Exception: ").Append(Exception).Append("\n");
+            sb.Append("  AppCenterException: ").Append(Exception).Append("\n");
             sb.Append("  CrashReason: ").Append(CrashReason).Append("\n");
             sb.Append("  ReasonFrame: ").Append(ReasonFrame).Append("\n");
             sb.Append("  Fatal: ").Append(Fatal).Append("\n");

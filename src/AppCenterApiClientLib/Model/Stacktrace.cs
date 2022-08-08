@@ -36,7 +36,7 @@ namespace AppCenterApiClientLib.Model
         /// <param name="reason">reason.</param>
         /// <param name="threads">threads.</param>
         /// <param name="exception">exception.</param>
-        public Stacktrace(string title = default(string), string reason = default(string), List<Thread> threads = default(List<Thread>), Exception exception = default(Exception))
+        public Stacktrace(string title = default(string), string reason = default(string), List<AppCenterThread> threads = default(List<AppCenterThread>), AppCenterException exception = default(AppCenterException))
         {
             this.Title = title;
             this.Reason = reason;
@@ -60,13 +60,13 @@ namespace AppCenterApiClientLib.Model
         /// Gets or Sets Threads
         /// </summary>
         [DataMember(Name="threads", EmitDefaultValue=false)]
-        public List<Thread> Threads { get; set; }
+        public List<AppCenterThread> Threads { get; set; }
 
         /// <summary>
-        /// Gets or Sets Exception
+        /// Gets or Sets AppCenterException
         /// </summary>
         [DataMember(Name="exception", EmitDefaultValue=false)]
-        public Exception Exception { get; set; }
+        public AppCenterException Exception { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -79,7 +79,7 @@ namespace AppCenterApiClientLib.Model
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  Threads: ").Append(Threads).Append("\n");
-            sb.Append("  Exception: ").Append(Exception).Append("\n");
+            sb.Append("  AppCenterException: ").Append(Exception).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

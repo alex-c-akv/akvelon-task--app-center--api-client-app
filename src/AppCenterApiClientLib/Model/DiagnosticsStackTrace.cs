@@ -63,7 +63,7 @@ namespace AppCenterApiClientLib.Model
         public List<DiagnosticsThread> Threads { get; set; }
 
         /// <summary>
-        /// Gets or Sets Exception
+        /// Gets or Sets AppCenterException
         /// </summary>
         [DataMember(Name="exception", EmitDefaultValue=false)]
         public DiagnosticsException Exception { get; set; }
@@ -79,7 +79,7 @@ namespace AppCenterApiClientLib.Model
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  Threads: ").Append(Threads).Append("\n");
-            sb.Append("  Exception: ").Append(Exception).Append("\n");
+            sb.Append("  AppCenterException: ").Append(Exception).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }

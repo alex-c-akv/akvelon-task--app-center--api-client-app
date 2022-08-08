@@ -146,12 +146,12 @@ namespace AppCenterApiClientLib.Test
             // TODO unit test for the property 'LastOccurrence'
         }
         /// <summary>
-        /// Test the property 'Exception'
+        /// Test the property 'AppCenterException'
         /// </summary>
         [Test]
         public void ExceptionTest()
         {
-            // TODO unit test for the property 'Exception'
+            // TODO unit test for the property 'AppCenterException'
         }
         /// <summary>
         /// Test the property 'CrashReason'

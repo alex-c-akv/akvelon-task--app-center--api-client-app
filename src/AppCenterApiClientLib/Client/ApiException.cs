@@ -12,7 +12,7 @@ using System;
 namespace AppCenterApiClientLib.Client
 {
     /// <summary>
-    /// API Exception
+    /// API AppCenterException
     /// </summary>
     public class ApiException : Exception
     {

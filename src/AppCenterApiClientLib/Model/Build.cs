@@ -83,7 +83,8 @@ namespace AppCenterApiClientLib.Model
             // to ensure "result" is required (not null)
             if (result == null)
             {
-                throw new InvalidDataException("result is a required property for Build and cannot be null");
+                // TODO: not working in real world
+                //throw new InvalidDataException("result is a required property for Build and cannot be null");
             }
             else
             {
@@ -101,7 +102,8 @@ namespace AppCenterApiClientLib.Model
             // to ensure "sourceVersion" is required (not null)
             if (sourceVersion == null)
             {
-                throw new InvalidDataException("sourceVersion is a required property for Build and cannot be null");
+                // TODO: not working in real world
+                //throw new InvalidDataException("sourceVersion is a required property for Build and cannot be null");
             }
             else
             {

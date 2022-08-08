@@ -127,7 +127,7 @@ namespace AppCenterApiClientLib.Model
         public List<ExceptionFrames> Frames { get; set; }
 
         /// <summary>
-        /// Gets or Sets Exception
+        /// Gets or Sets AppCenterException
         /// </summary>
         [DataMember(Name="exception", EmitDefaultValue=false)]
         public DiagnosticsException Exception { get; set; }
@@ -157,7 +157,7 @@ namespace AppCenterApiClientLib.Model
             sb.Append("class DiagnosticsThread {\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Frames: ").Append(Frames).Append("\n");
-            sb.Append("  Exception: ").Append(Exception).Append("\n");
+            sb.Append("  AppCenterException: ").Append(Exception).Append("\n");
             sb.Append("  Relevant: ").Append(Relevant).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
             sb.Append("  Crashed: ").Append(Crashed).Append("\n");

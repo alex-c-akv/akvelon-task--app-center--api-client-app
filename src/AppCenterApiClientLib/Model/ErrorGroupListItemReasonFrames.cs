@@ -101,7 +101,7 @@ namespace AppCenterApiClientLib.Model
         /// <param name="codeRaw">Unformatted Frame string.</param>
         /// <param name="language">programming language of the frame.</param>
         /// <param name="methodParams">parameters of the frames method.</param>
-        /// <param name="exceptionType">Exception type..</param>
+        /// <param name="exceptionType">AppCenterException type..</param>
         /// <param name="osExceptionType">OS exception type. (aka. SIGNAL).</param>
         public ErrorGroupListItemReasonFrames(string className = default(string), string method = default(string), bool? classMethod = default(bool?), string file = default(string), int? line = default(int?), bool? appCode = default(bool?), string frameworkName = default(string), string codeFormatted = default(string), string codeRaw = default(string), LanguageEnum? language = default(LanguageEnum?), string methodParams = default(string), string exceptionType = default(string), string osExceptionType = default(string))
         {
@@ -192,9 +192,9 @@ namespace AppCenterApiClientLib.Model
         public string MethodParams { get; set; }
 
         /// <summary>
-        /// Exception type.
+        /// AppCenterException type.
         /// </summary>
-        /// <value>Exception type.</value>
+        /// <value>AppCenterException type.</value>
         [DataMember(Name="exceptionType", EmitDefaultValue=false)]
         public string ExceptionType { get; set; }
 

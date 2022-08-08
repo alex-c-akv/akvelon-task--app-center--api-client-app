@@ -27,7 +27,7 @@ namespace AppCenterApiClientLib.Model
     /// a exception
     /// </summary>
     [DataContract]
-        public partial class Exception :  IEquatable<Exception>, IValidatableObject
+        public partial class AppCenterException :  IEquatable<AppCenterException>, IValidatableObject
     {
         /// <summary>
         /// SDK/Platform this thread is beeing generated from
@@ -78,7 +78,7 @@ namespace AppCenterApiClientLib.Model
         [DataMember(Name="platform", EmitDefaultValue=false)]
         public PlatformEnum? Platform { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Exception" /> class.
+        /// Initializes a new instance of the <see cref="AppCenterException" /> class.
         /// </summary>
         /// <param name="reason">Reason of the exception.</param>
         /// <param name="type">Type of the exception (NSSomethingException, NullPointerException).</param>
@@ -86,12 +86,12 @@ namespace AppCenterApiClientLib.Model
         /// <param name="relevant">relevant exception (crashed).</param>
         /// <param name="innerExceptions">innerExceptions.</param>
         /// <param name="platform">SDK/Platform this thread is beeing generated from.</param>
-        public Exception(string reason = default(string), string type = default(string), List<ExceptionFrames> frames = default(List<ExceptionFrames>), bool? relevant = default(bool?), List<Exception> innerExceptions = default(List<Exception>), PlatformEnum? platform = default(PlatformEnum?))
+        public AppCenterException(string reason = default(string), string type = default(string), List<ExceptionFrames> frames = default(List<ExceptionFrames>), bool? relevant = default(bool?), List<AppCenterException> innerExceptions = default(List<AppCenterException>), PlatformEnum? platform = default(PlatformEnum?))
         {
             // to ensure "frames" is required (not null)
             if (frames == null)
             {
-                throw new InvalidDataException("frames is a required property for Exception and cannot be null");
+                throw new InvalidDataException("frames is a required property for AppCenterException and cannot be null");
             }
             else
             {
@@ -136,7 +136,7 @@ namespace AppCenterApiClientLib.Model
         /// Gets or Sets InnerExceptions
         /// </summary>
         [DataMember(Name="inner_exceptions", EmitDefaultValue=false)]
-        public List<Exception> InnerExceptions { get; set; }
+        public List<AppCenterException> InnerExceptions { get; set; }
 
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace AppCenterApiClientLib.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Exception {\n");
+            sb.Append("class AppCenterException {\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Frames: ").Append(Frames).Append("\n");
@@ -173,15 +173,15 @@ namespace AppCenterApiClientLib.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Exception);
+            return this.Equals(input as AppCenterException);
         }
 
         /// <summary>
-        /// Returns true if Exception instances are equal
+        /// Returns true if AppCenterException instances are equal
         /// </summary>
-        /// <param name="input">Instance of Exception to be compared</param>
+        /// <param name="input">Instance of AppCenterException to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Exception input)
+        public bool Equals(AppCenterException input)
         {
             if (input == null)
                 return false;

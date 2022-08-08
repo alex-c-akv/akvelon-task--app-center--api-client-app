@@ -620,7 +620,7 @@ OpenAPI spec version: v0.1
     <Compile Include="Model\Events.cs" />
     <Compile Include="Model\EventSetting.cs" />
     <Compile Include="Model\EventsEvents.cs" />
-    <Compile Include="Model\Exception.cs" />
+    <Compile Include="Model\AppCenterException.cs" />
     <Compile Include="Model\ExceptionFrames.cs" />
     <Compile Include="Model\ExportBlobConfiguration.cs" />
     <Compile Include="Model\ExportConfiguration.cs" />
@@ -1192,7 +1192,7 @@ OpenAPI spec version: v0.1
     <Compile Include="Model\TestSeries.cs" />
     <Compile Include="Model\TestSeries1.cs" />
     <Compile Include="Model\TestSeriesName.cs" />
-    <Compile Include="Model\Thread.cs" />
+    <Compile Include="Model\AppCenterThread.cs" />
     <Compile Include="Model\Tier.cs" />
     <Compile Include="Model\TokenCancelBody.cs" />
     <Compile Include="Model\TokenQueryResult.cs" />

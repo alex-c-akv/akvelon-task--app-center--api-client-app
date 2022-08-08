@@ -27,7 +27,7 @@ namespace AppCenterApiClientLib.Model
     /// a thread representation
     /// </summary>
     [DataContract]
-        public partial class Thread :  IEquatable<Thread>, IValidatableObject
+        public partial class AppCenterThread :  IEquatable<AppCenterThread>, IValidatableObject
     {
         /// <summary>
         /// SDK/Platform this thread is beeing generated from
@@ -78,7 +78,7 @@ namespace AppCenterApiClientLib.Model
         [DataMember(Name="platform", EmitDefaultValue=false)]
         public PlatformEnum? Platform { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Thread" /> class.
+        /// Initializes a new instance of the <see cref="AppCenterThread" /> class.
         /// </summary>
         /// <param name="title">name of the thread (required).</param>
         /// <param name="frames">frames of that thread (required).</param>
@@ -86,7 +86,7 @@ namespace AppCenterApiClientLib.Model
         /// <param name="relevant">Shows if a thread is relevant or not. Is false if all frames are non relevant, otherwise true.</param>
         /// <param name="platform">SDK/Platform this thread is beeing generated from.</param>
         /// <param name="crashed">True if this thread crashed.</param>
-        public Thread(string title = default(string), List<ExceptionFrames> frames = default(List<ExceptionFrames>), Exception exception = default(Exception), bool? relevant = default(bool?), PlatformEnum? platform = default(PlatformEnum?), bool? crashed = default(bool?))
+        public AppCenterThread(string title = default(string), List<ExceptionFrames> frames = default(List<ExceptionFrames>), AppCenterException exception = default(AppCenterException), bool? relevant = default(bool?), PlatformEnum? platform = default(PlatformEnum?), bool? crashed = default(bool?))
         {
             // to ensure "title" is required (not null)
             if (title == null)
@@ -127,10 +127,10 @@ namespace AppCenterApiClientLib.Model
         public List<ExceptionFrames> Frames { get; set; }
 
         /// <summary>
-        /// Gets or Sets Exception
+        /// Gets or Sets AppCenterException
         /// </summary>
         [DataMember(Name="exception", EmitDefaultValue=false)]
-        public Exception Exception { get; set; }
+        public AppCenterException Exception { get; set; }
 
         /// <summary>
         /// Shows if a thread is relevant or not. Is false if all frames are non relevant, otherwise true
@@ -157,7 +157,7 @@ namespace AppCenterApiClientLib.Model
             sb.Append("class Thread {\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Frames: ").Append(Frames).Append("\n");
-            sb.Append("  Exception: ").Append(Exception).Append("\n");
+            sb.Append("  AppCenterException: ").Append(Exception).Append("\n");
             sb.Append("  Relevant: ").Append(Relevant).Append("\n");
             sb.Append("  Platform: ").Append(Platform).Append("\n");
             sb.Append("  Crashed: ").Append(Crashed).Append("\n");
@@ -181,7 +181,7 @@ namespace AppCenterApiClientLib.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Thread);
+            return this.Equals(input as AppCenterThread);
         }
 
         /// <summary>
@@ -189,7 +189,7 @@ namespace AppCenterApiClientLib.Model
         /// </summary>
         /// <param name="input">Instance of Thread to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Thread input)
+        public bool Equals(AppCenterThread input)
         {
             if (input == null)
                 return false;
