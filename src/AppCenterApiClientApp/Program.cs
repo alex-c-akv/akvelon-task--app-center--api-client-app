@@ -26,6 +26,7 @@
 
                 // .NET 4.8 doesn't support System.CommandLine, so emulate it
                 Run(apiKey);
+                return;
             }
 
             throw new Exception("ApiKey wasn't provided!");
