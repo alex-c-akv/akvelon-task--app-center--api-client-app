@@ -2,7 +2,11 @@
 
 ## AppCenterApiClientApp - console API client for the App Center
 
+    USAGE: AppCenterApiClientApp --api-key <YOUR_APP_CENTER_API_KEY_HERE>
+
 ## AppCenterApiClientLib - the C# library for the App Center Client
+
+    ./run-in-docker.sh generate --input-spec app-center/app-center--swagger.json --lang csharp --output /gen/app-center/out -DtargetFramework=v5.0 -DpackageName=AppCenterApiClientLib
 
 Microsoft Visual Studio App Center API
 
